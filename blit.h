@@ -35,6 +35,9 @@ void limpiar_fuego(int,int);
 void blit_nave(int,int);
 void limpiar_nave(int,int);
 
+void blit_dark(int,int);
+void limpiar_dark(int,int);
+
 void blit_escudo(int,int,int);
 void blit_escudo_carga(int,int,int);
 void limpiar_escudo(int,int);

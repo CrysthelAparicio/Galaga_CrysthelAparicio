@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <curses.h>
+#include <ncurses.h>
 #include <unistd.h>
 #include <time.h>
 #include <sys/time.h>
@@ -54,7 +54,7 @@ void pantalla_inicio()
 }
 
 // Retorna real si la terminal tiene tamaño de 80x25
-int right_size()
+int tam_derecho()
 {
 	getmaxyx(term,term_y,term_x);
 
@@ -66,13 +66,13 @@ int right_size()
 
 void presentacion()
 {
-	blit_bordes(COL_BLUE);
-	SET_COLOR(COL_GREEN);
+	blit_bordes(COLOR_BLACK);
+	SET_COLOR(COL_MAGENTA);
 	mvwprintw(term,8+y_ofs,25+x_ofs,"-- -= I-N-F-I-N-I-T-E  W-A-R =- --");
 	mvwprintw(term,11+y_ofs,27+x_ofs,  "Salva al Planeta!!!");
 	SET_COLOR(COL_WHITE);
 	mvwprintw(term,22+y_ofs,29+x_ofs,    "Presiona cualquier tecla para empezar");
-	SET_COLOR(COL_BKG);
+	SET_COLOR(COL_DARKCYAN);
 
 	while (wgetch(term) == ERR)
 		;
@@ -315,7 +315,7 @@ int main()
 	srand(time(NULL));
 	pantalla_inicio();
 
-	if (!right_size())
+	if (!tam_derecho())
 	{
 		endwin();
 		fprintf(stderr,"Galaga te pide un tamaño de 80x25 en tu terminal!\n");
