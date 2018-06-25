@@ -16,7 +16,7 @@ del punto central como parámetros */
 void blit_explosion_1(int x, int y)
 {
 
-	SET_COLOR(COL_DARKYELLOW);
+	SET_COLOR(COL_PINK);
 	if (es_y_rango(y-1))
 	{
 		mvwaddch(term,y-1,x,(chtype)'%');
@@ -24,9 +24,9 @@ void blit_explosion_1(int x, int y)
 	if (es_y_rango(y))
 	{
 		if (es_x_rango(x-1)) mvwaddch(term,y,x-1,(chtype)'%');
-		SET_COLOR(COL_DARKRED);
+		SET_COLOR(COL_PINK);
 		mvwaddch(term,y,x,(chtype)'%');
-		SET_COLOR(COL_DARKYELLOW);
+		SET_COLOR(COL_PINK);
 		if (es_x_rango(x+1)) mvwaddch(term,y,x+1,(chtype)'%');
 	}
 	if (es_y_rango(y+1))
@@ -362,14 +362,17 @@ void limpiar_grande_nave(int x, int y)
 	if (es_y_rango(y+2)) mvwprintw(term,y+2,x+1, "   ");
 }
 
-void blit_peque_nave(int x,int y)
-{
 /*
 Nave Pequeña:
 
 Y!!Y
  --
 */
+
+
+void blit_peque_nave(int x,int y)
+{
+
 	if (es_y_rango(y))
 	{
 		SET_COLOR(COL_BLUE);

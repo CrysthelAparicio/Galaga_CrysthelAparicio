@@ -6,7 +6,7 @@
 #include "defs.h"
 
 #ifdef DEBUG_LEV
-#include <curses.h>
+#include <ncurses.h>
 extern WINDOW *term;
 #endif
 
@@ -41,6 +41,7 @@ extern const bitmask bitmask_dim_nave;
 #define MOVER_SERPIENTE   4
 
 char level_1[] = {
+	
 0x00,0x00, 0, AT_PEQUE, 39,-5, 0, MOVER_DERECHO, -1,
 0x00,0x04, 1, AT_PEQUE, 39,-5, 0, MOVER_DERECHO, -1,
 0x00,0x08, 2, AT_PEQUE, 39,-5, 0, MOVER_DERECHO, -1,
@@ -53,44 +54,9 @@ char level_1[] = {
 0x00,0x36, 8, AT_PEQUE, 40,-5, -1, MOVER_DERECHO, -1,
 0x00,0x38, 9, AT_PEQUE, 38,-5, -1, MOVER_DERECHO, -1,
 
-0x00,0x54, 0, AT_PEQUE,  2,-3,  1, MOVER_DIAGONAL, -1,
-0x00,0x58, 1, AT_PEQUE,  5,-3,  1, MOVER_DIAGONAL, -1,
-0x00,0x5C, 2, AT_PEQUE,  8,-3,  1, MOVER_DIAGONAL, -1,
-0x00,0x60, 3, AT_PEQUE, 11,-3,  1, MOVER_DIAGONAL, -1,
-0x00,0x64, 4, AT_PEQUE, 14,-3,  1, MOVER_DIAGONAL, -1,
-
-0x00,0x70, 5, AT_PEQUE, 75,-3, -1, MOVER_DIAGONAL, -1,
-0x00,0x74, 6, AT_PEQUE, 72,-3, -1, MOVER_DIAGONAL, -1,
-0x00,0x78, 7, AT_PEQUE, 69,-3, -1, MOVER_DIAGONAL, -1,
-0x00,0x7C, 8, AT_PEQUE, 66,-3, -1, MOVER_DIAGONAL, -1,
-0x00,0x80, 9, AT_PEQUE, 63,-3, -1, MOVER_DIAGONAL, -1,
-
-0x00,0xA0, 0, AT_PEQUE,  2,-3,  2, MOVER_DIAGONAL, -1,
-0x00,0xA2, 1, AT_PEQUE,  5,-3,  2, MOVER_DIAGONAL, -1,
-0x00,0xA4, 2, AT_PEQUE,  8,-3,  2, MOVER_DIAGONAL, -1,
-0x00,0xA6, 3, AT_PEQUE, 11,-3,  2, MOVER_DIAGONAL, -1,
-0x00,0xA8, 4, AT_PEQUE, 14,-3,  2, MOVER_DIAGONAL, -1,
-
-0x00,0xB0, 5, AT_PEQUE, 75,-3, -2, MOVER_DIAGONAL, -1,
-0x00,0xB2, 6, AT_PEQUE, 72,-3, -2, MOVER_DIAGONAL, -1,
-0x00,0xB4, 7, AT_PEQUE, 69,-3, -2, MOVER_DIAGONAL, -1,
-0x00,0xB6, 8, AT_PEQUE, 66,-3, -2, MOVER_DIAGONAL, -1,
-0x00,0xB8, 9, AT_PEQUE, 63,-3, -2, MOVER_DIAGONAL, -1,
-
-0x00,0xD0, 0, AT_PEQUE, 75,-3,-50, MOVER_OSCILANTE, -1,
-0x00,0xD4, 1, AT_PEQUE, 75,-3,-50, MOVER_OSCILANTE, -1,
-0x00,0xD8, 2, AT_PEQUE, 75,-3,-50, MOVER_OSCILANTE, -1,
-0x00,0xDC, 3, AT_PEQUE, 75,-3,-50, MOVER_OSCILANTE, -1,
-0x00,0xE0, 4, AT_PEQUE, 75,-3,-50, MOVER_OSCILANTE, -1,
-
-0x01,0x10, 5, AT_PEQUE,  2,-3, 50, MOVER_OSCILANTE, -1,
-0x01,0x14, 6, AT_PEQUE,  2,-3, 50, MOVER_OSCILANTE, -1,
-0x01,0x18, 7, AT_PEQUE,  2,-3, 50, MOVER_OSCILANTE, -1,
-0x01,0x1C, 8, AT_PEQUE,  2,-3, 50, MOVER_OSCILANTE, -1,
-0x01,0x20, 9, AT_PEQUE,  2,-3, 50, MOVER_OSCILANTE, -1,
-
 0x01,0x60, 0, NV_NINGUNA,    0, 0,  0, MOVER_DERECHO,  -1,
 };
+
 
 char level_2[] = {
 0x00,0x00, 0, AT_BOL,   48,-3,  0, MOVER_SERPIENTE, -1,
@@ -147,45 +113,37 @@ char level_2[] = {
 char level_3[] = {
 0x00,0x00, 0, AT_LI,  3,-3,  70, MOVER_OSCILANTE, -1,
 0x00,0x0D, 1, AT_DIM,  19,11,  -1, MOVER_DERECHO,  0,
-0x00,0x10, 8, AT_PEQUE, 55,-3,  0, MOVER_DERECHO,  -1,
 0x00,0x15, 2, AT_DIM,  27,11,  -1, MOVER_DERECHO,  0,
 0x00,0x1D, 3, AT_DIM,  35,11,  -1, MOVER_DERECHO,  0,
 0x00,0x25, 4, AT_DIM,  43,11,  -1, MOVER_DERECHO,  0,
 0x00,0x2D, 5, AT_DIM,  51,11,  -1, MOVER_DERECHO,  0,
-0x00,0x30, 9, AT_PEQUE, 18,-3,  0, MOVER_DERECHO,  -1,
 0x00,0x35, 6, AT_DIM,  59,11,  -1, MOVER_DERECHO,  0,
 0x00,0x3D, 7, AT_DIM,  67,11,  -1, MOVER_DERECHO,  0,
 
 0x00,0x49, 1, AT_LI, 72,-3, -70, MOVER_OSCILANTE, -1,
 0x00,0x56, 2, AT_DIM,  60,11,  -1, MOVER_DERECHO,  1,
-0x00,0x57, 0, AT_PEQUE, 24,-3,  0, MOVER_DERECHO, -1,
 0x00,0x5E, 3, AT_DIM,  52,11,  -1, MOVER_DERECHO,  1,
 0x00,0x66, 4, AT_DIM,  44,11,  -1, MOVER_DERECHO,  1,
 0x00,0x6E, 5, AT_DIM,  36,11,  -1, MOVER_DERECHO,  1,
 0x00,0x76, 6, AT_DIM,  28,11,  -1, MOVER_DERECHO,  1,
-0x00,0x7A, 9, AT_PEQUE, 61,-3,  0, MOVER_DERECHO, -1,
 0x00,0x7E, 7, AT_DIM,  20,11,  -1, MOVER_DERECHO,  1,
 0x00,0x86, 8, AT_DIM,  12,11,  -1, MOVER_DERECHO,  1,
 
 0x00,0xB0, 0, AT_LI,  3,-3,  70, MOVER_OSCILANTE, -1,
 0x00,0xBD, 1, AT_DIM,  19,11,  -1, MOVER_DERECHO,  0,
-0x00,0xC0, 8, AT_PEQUE, 45,-3, -1, MOVER_DERECHO,  -1,
 0x00,0xC5, 2, AT_DIM,  27,11,  -1, MOVER_DERECHO,  0,
 0x00,0xCD, 3, AT_DIM,  35,11,  -1, MOVER_DERECHO,  0,
 0x00,0xD5, 4, AT_DIM,  43,11,  -1, MOVER_DERECHO,  0,
 0x00,0xDD, 5, AT_DIM,  51,11,  -1, MOVER_DERECHO,  0,
-0x00,0xE0, 9, AT_PEQUE,  8,-3, -1, MOVER_DERECHO,  -1,
 0x00,0xE5, 6, AT_DIM,  59,11,  -1, MOVER_DERECHO,  0,
 0x00,0xED, 7, AT_DIM,  67,11,  -1, MOVER_DERECHO,  0,
 
 0x00,0xF9, 1, AT_LI, 72,-3, -70, MOVER_OSCILANTE, -1,
 0x01,0x06, 2, AT_DIM,  60,11,  -1, MOVER_DERECHO,  1,
-0x01,0x07, 0, AT_PEQUE, 30,-3, -1, MOVER_DERECHO, -1,
 0x01,0x0E, 3, AT_DIM,  52,11,  -1, MOVER_DERECHO,  1,
 0x01,0x16, 4, AT_DIM,  44,11,  -1, MOVER_DERECHO,  1,
 0x01,0x1E, 5, AT_DIM,  36,11,  -1, MOVER_DERECHO,  1,
 0x01,0x26, 6, AT_DIM,  28,11,  -1, MOVER_DERECHO,  1,
-0x01,0x2A, 9, AT_PEQUE, 74,-3, -1, MOVER_DERECHO, -1,
 0x01,0x2E, 7, AT_DIM,  20,11,  -1, MOVER_DERECHO,  1,
 0x01,0x36, 8, AT_DIM,  12,11,  -1, MOVER_DERECHO,  1,
 
@@ -384,12 +342,14 @@ int creacion_naves()
 
 				switch (todas_naves[ar_num].tipo)
 				{
+					
 				case AT_PEQUE:
 					todas_naves[ar_num].blit=blit_peque_nave;
 					todas_naves[ar_num].clear=limpiar_peque_nave;
 					for (n=0;n<MAX_ALT;n++)
 						todas_naves[ar_num].collide[n]=bitmask_lit_nave[n];
 					break;
+					
 				case AT_GRA:
 					todas_naves[ar_num].blit=blit_grande_nave;
 					todas_naves[ar_num].clear=limpiar_grande_nave;
