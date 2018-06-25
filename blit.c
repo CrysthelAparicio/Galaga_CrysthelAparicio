@@ -15,11 +15,7 @@ del punto central como parámetros */
 
 void blit_explosion_1(int x, int y)
 {
-/*
- %
-%%%
- %
-*/
+
 	SET_COLOR(COL_DARKYELLOW);
 	if (es_y_rango(y-1))
 	{
@@ -61,11 +57,6 @@ void limpiar_explosion_1(int x, int y)
 
 void blit_explosion_2(int x, int y)
 {
-/*
- &     
-&&&   
- &      
-*/
 	SET_COLOR(COL_DARKRED);
 	if (es_y_rango(y-1))
 	{
@@ -93,13 +84,6 @@ void limpiar_explosion_2(int x, int y)
 
 void blit_explosion_3(int x, int y)
 {
-/*
-  .
- #@#
-#@#@#
- #@#
-  "
-*/
 
 	SET_COLOR(COL_DARKRED);
 	if (es_y_rango(y-2))
@@ -108,31 +92,31 @@ void blit_explosion_3(int x, int y)
 	}
 	if (es_y_rango(y-1))
 	{
-		if (es_x_rango(x-1)) mvwaddch(term,y-1,x-1,(chtype)'#');
+		if (es_x_rango(x-1)) mvwaddch(term,y-1,x-1,(chtype)'%');
 		SET_COLOR(COL_RED);
-		mvwaddch(term,y-1,x,(chtype)'@');
+		mvwaddch(term,y-1,x,(chtype)'%');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x+1)) mvwaddch(term,y-1,x+1,(chtype)'#');
+		if (es_x_rango(x+1)) mvwaddch(term,y-1,x+1,(chtype)'%');
 	}
 	if (es_y_rango(y))
 	{
-		if (es_x_rango(x-2)) mvwaddch(term,y,x-2,(chtype)'#');
+		if (es_x_rango(x-2)) mvwaddch(term,y,x-2,(chtype)'%');
 		SET_COLOR(COL_RED);
-		if (es_x_rango(x-1)) mvwaddch(term,y,x-1,(chtype)'@');
+		if (es_x_rango(x-1)) mvwaddch(term,y,x-1,(chtype)'%');
 		SET_COLOR(COL_YELLOW);
-		mvwaddch(term,y,x,(chtype)'#');
+		mvwaddch(term,y,x,(chtype)'%');
 		SET_COLOR(COL_RED);
-		if (es_x_rango(x+1)) mvwaddch(term,y,x+1,(chtype)'@');
+		if (es_x_rango(x+1)) mvwaddch(term,y,x+1,(chtype)'%');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x+2)) mvwaddch(term,y,x+2,(chtype)'#');
+		if (es_x_rango(x+2)) mvwaddch(term,y,x+2,(chtype)'%');
 	}
 	if (es_y_rango(y+1))
 	{
-		if (es_x_rango(x-1)) mvwaddch(term,y+1,x-1,(chtype)'#');
+		if (es_x_rango(x-1)) mvwaddch(term,y+1,x-1,(chtype)'%');
 		SET_COLOR(COL_RED);
-		mvwaddch(term,y+1,x,(chtype)'@');
+		mvwaddch(term,y+1,x,(chtype)'%');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x+1)) mvwaddch(term,y+1,x+1,(chtype)'#');
+		if (es_x_rango(x+1)) mvwaddch(term,y+1,x+1,(chtype)'%');
 	}
 	if (es_y_rango(y+2))
 	{
@@ -176,15 +160,6 @@ void limpiar_explosion_3(int x, int y)
 
 void blit_explosion_4(int x, int y)
 {
-/*
-   .
-  @#@
- @#@#@
-@#@#@#@
- @#@#@
-  @#@
-   "
-*/
 	SET_COLOR(COL_DARKYELLOW);
 	if (es_y_rango(y-3))
 	{
@@ -192,59 +167,59 @@ void blit_explosion_4(int x, int y)
 	}
 	if (es_y_rango(y-2))
 	{
-		if (es_x_rango(x-1)) mvwaddch(term,y-2,x-1,(chtype)'#');
+		if (es_x_rango(x-1)) mvwaddch(term,y-2,x-1,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		mvwaddch(term,y-2,x,(chtype)'@');
+		mvwaddch(term,y-2,x,(chtype)'&');
 		SET_COLOR(COL_DARKYELLOW);
-		if (es_x_rango(x+1)) mvwaddch(term,y-2,x+1,(chtype)'#');
+		if (es_x_rango(x+1)) mvwaddch(term,y-2,x+1,(chtype)'&');
 	}
 	if (es_y_rango(y-1))
 	{
-		if (es_x_rango(x-2)) mvwaddch(term,y-1,x-2,(chtype)'#');
+		if (es_x_rango(x-2)) mvwaddch(term,y-1,x-2,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x-1)) mvwaddch(term,y-1,x-1,(chtype)'@');
+		if (es_x_rango(x-1)) mvwaddch(term,y-1,x-1,(chtype)'&');
 		SET_COLOR(COL_RED);
-		mvwaddch(term,y-1,x,(chtype)'#');
+		mvwaddch(term,y-1,x,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x+1)) mvwaddch(term,y-1,x+1,(chtype)'@');
+		if (es_x_rango(x+1)) mvwaddch(term,y-1,x+1,(chtype)'&');
 		SET_COLOR(COL_DARKYELLOW);
-		if (es_x_rango(x+2)) mvwaddch(term,y-1,x+2,(chtype)'#');
+		if (es_x_rango(x+2)) mvwaddch(term,y-1,x+2,(chtype)'&');
 	}
 	if (es_y_rango(y))
 	{
-		if (es_x_rango(x-3)) mvwaddch(term,y,x-3,(chtype)'#');
+		if (es_x_rango(x-3)) mvwaddch(term,y,x-3,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x-2)) mvwaddch(term,y,x-2,(chtype)'@');
+		if (es_x_rango(x-2)) mvwaddch(term,y,x-2,(chtype)'&');
 		SET_COLOR(COL_RED);
-		if (es_x_rango(x-1)) mvwaddch(term,y,x-1,(chtype)'#');
+		if (es_x_rango(x-1)) mvwaddch(term,y,x-1,(chtype)'&');
 		SET_COLOR(COL_YELLOW);
-		mvwaddch(term,y,x,(chtype)'@');
+		mvwaddch(term,y,x,(chtype)'&');
 		SET_COLOR(COL_RED);
-		if (es_x_rango(x+1)) mvwaddch(term,y,x+1,(chtype)'#');
+		if (es_x_rango(x+1)) mvwaddch(term,y,x+1,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x+2)) mvwaddch(term,y,x+2,(chtype)'@');
+		if (es_x_rango(x+2)) mvwaddch(term,y,x+2,(chtype)'&');
 		SET_COLOR(COL_DARKYELLOW);
-		if (es_x_rango(x+3)) mvwaddch(term,y,x+3,(chtype)'#');
+		if (es_x_rango(x+3)) mvwaddch(term,y,x+3,(chtype)'&');
 	}
 	if (es_y_rango(y+1))
 	{
-		if (es_x_rango(x-2)) mvwaddch(term,y+1,x-2,(chtype)'#');
+		if (es_x_rango(x-2)) mvwaddch(term,y+1,x-2,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x-1)) mvwaddch(term,y+1,x-1,(chtype)'@');
+		if (es_x_rango(x-1)) mvwaddch(term,y+1,x-1,(chtype)'&');
 		SET_COLOR(COL_RED);
-		mvwaddch(term,y+1,x,(chtype)'#');
+		mvwaddch(term,y+1,x,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		if (es_x_rango(x+1)) mvwaddch(term,y+1,x+1,(chtype)'@');
+		if (es_x_rango(x+1)) mvwaddch(term,y+1,x+1,(chtype)'&');
 		SET_COLOR(COL_DARKYELLOW);
-		if (es_x_rango(x+2)) mvwaddch(term,y+1,x+2,(chtype)'#');
+		if (es_x_rango(x+2)) mvwaddch(term,y+1,x+2,(chtype)'&');
 	}
 	if (es_y_rango(y+2))
 	{
-		if (es_x_rango(x-1)) mvwaddch(term,y+2,x-1,(chtype)'#');
+		if (es_x_rango(x-1)) mvwaddch(term,y+2,x-1,(chtype)'&');
 		SET_COLOR(COL_DARKRED);
-		mvwaddch(term,y+2,x,(chtype)'@');
+		mvwaddch(term,y+2,x,(chtype)'&');
 		SET_COLOR(COL_DARKYELLOW);
-		if (es_x_rango(x+1)) mvwaddch(term,y+2,x+1,(chtype)'#');
+		if (es_x_rango(x+1)) mvwaddch(term,y+2,x+1,(chtype)'&');
 	}
 	if (es_y_rango(y+3))
 	{
@@ -392,15 +367,15 @@ void blit_peque_nave(int x,int y)
 /*
 Nave Pequeña:
 
-Y_Y
- "
+Y!!Y
+ --
 */
 	if (es_y_rango(y))
 	{
 		SET_COLOR(COL_BLUE);
 		mvwprintw(term,y,x,"Y Y");
 		SET_COLOR(COL_WHITE);
-		mvwaddch(term,y,x+1,(chtype)'_');
+		mvwaddch(term,y,x+1,(chtype)'!');
 	}
 	if (es_y_rango(y+1))
 	{
@@ -420,12 +395,13 @@ void limpiar_peque_nave(int x, int y)
 void blit_bola_nave(int x,int y)
 {
 /*
-/^\
-\_/
+    P'P
+    P P
+     '
 */
-	SET_COLOR(COL_DARKMAGENTA);
-	if (es_y_rango(y)) mvwprintw(term,y,x,"/^\\");
-	if (es_y_rango(y+1)) mvwprintw(term,y+1,x,"\\_/");
+	SET_COLOR(COL_DARKYELLOW);
+	if (es_y_rango(y)) mvwprintw(term,y,x,"P'\\");
+	if (es_y_rango(y+1)) mvwprintw(term,y+1,x,"\\_P");
 	SET_COLOR(COL_BKG);
 }
 
@@ -501,11 +477,8 @@ void limpiar_limo_nave(int x,int y)
 
 void blit_mini_nave(int x,int y)
 {
-/*
-o
-*/
-	SET_COLOR(COL_GREEN);
-	if (es_y_rango(y)) mvwprintw(term,y,x,"o");
+	SET_COLOR(COL_GRAY);
+	if (es_y_rango(y)) mvwprintw(term,y,x,"x");
 	SET_COLOR(COL_BKG);
 }
 
@@ -631,7 +604,7 @@ void blit_escudo(int x,int y,int intensity)
 {
 /* El escudo del Cap, no lo pude hacer circular:
 
-/~~~^~~~\
+(---¡---)
 
 */
 	int col1=COL_DARKBLUE,col2=COL_DARKBLUE,col3=COL_DARKBLUE;
@@ -649,14 +622,14 @@ void blit_escudo(int x,int y,int intensity)
 	if (es_x_rango(x))
 	{
 		SET_COLOR(col1);
-		mvwprintw(term,y,x,"/");
+		mvwprintw(term,y,x,"(");
 	}
 	SET_COLOR(col2);
-	mvwprintw(term,y,x+1,"~~");
+	mvwprintw(term,y,x+1,"--");
 	SET_COLOR(col3);
-	wprintw(term,"~^~");
+	wprintw(term,"-¡-");
 	SET_COLOR(col2);
-	wprintw(term,"~~");
+	wprintw(term,"--");
 	if (es_x_rango(x+8))
 	{
 		SET_COLOR(col1);

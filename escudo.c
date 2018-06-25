@@ -27,24 +27,6 @@ void abrir_escudos(int x, int y)
 	}
 }
 
-void blit_escudos()
-{
-	if (scudo.x >= -1)
-	{
-		scudo.blit(scudo.x+x_ofs,scudo.y+y_ofs,(scudo.estado/ESCUDO_PASO)+1);
-	}
-	else if (scudo.estado>0) blit_escudo_carga(x_ofs,y_ofs,scudo.estado/(ESCUDO_MAX/20));
-}
-
-void limpia_escudos()
-{
-	if (scudo.x >= -1)
-	{
-		scudo.clear(scudo.x+x_ofs,scudo.y+y_ofs);
-	}
-	limpiar_escudo_carga(x_ofs,y_ofs);
-}
-
 void mover_escudos()
 {
 	if (scudo.x<-1)
@@ -85,4 +67,23 @@ void mover_escudos()
 		}
 	}
 }
+
+void blit_escudos()
+{
+	if (scudo.x >= -1)
+	{
+		scudo.blit(scudo.x+x_ofs,scudo.y+y_ofs,(scudo.estado/ESCUDO_PASO)+1);
+	}
+	else if (scudo.estado>0) blit_escudo_carga(x_ofs,y_ofs,scudo.estado/(ESCUDO_MAX/20));
+}
+
+void limpia_escudos()
+{
+	if (scudo.x >= -1)
+	{
+		scudo.clear(scudo.x+x_ofs,scudo.y+y_ofs);
+	}
+	limpiar_escudo_carga(x_ofs,y_ofs);
+}
+
 

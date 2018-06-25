@@ -367,6 +367,6 @@ int main()
 	if (juego_terminado) final();
 
 	printf("\nTu tienes %d puntos!\n",puntaje);
-	printf("-= I-N-F-I-N-I-T-E  W-A-R =- Galaga! \n");
+	printf("-= INFINITE WAR =- Galaga! \n");
 	return 0;
 }

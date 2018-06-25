@@ -30,29 +30,6 @@ void inicia_fuegos()
 	}
 }
 
-void blit_fuegos()
-{
-	int i;
-	for (i=0;i<NUM_FUEGOS;i++)
-	{
-		if (todos_fuegos[i].x >= 0)
-		{
-			blit_fuego(todos_fuegos[i].x+x_ofs,todos_fuegos[i].y+y_ofs);
-		}
-	}
-}
-
-void elimina_fuegos()
-{
-	int i;
-	for (i=0;i<NUM_FUEGOS;i++)
-	{
-		if (todos_fuegos[i].x >= 0)
-		{
-			limpiar_fuego(todos_fuegos[i].x+x_ofs,todos_fuegos[i].y+y_ofs);
-		}
-	}
-}
 
 void movimiento_fuegos()
 {
@@ -79,6 +56,30 @@ void movimiento_fuegos()
 					todos_fuegos[i].x = -1;
 				}
 			}
+		}
+	}
+}
+
+void blit_fuegos()
+{
+	int i;
+	for (i=0;i<NUM_FUEGOS;i++)
+	{
+		if (todos_fuegos[i].x >= 0)
+		{
+			blit_fuego(todos_fuegos[i].x+x_ofs,todos_fuegos[i].y+y_ofs);
+		}
+	}
+}
+
+void elimina_fuegos()
+{
+	int i;
+	for (i=0;i<NUM_FUEGOS;i++)
+	{
+		if (todos_fuegos[i].x >= 0)
+		{
+			limpiar_fuego(todos_fuegos[i].x+x_ofs,todos_fuegos[i].y+y_ofs);
 		}
 	}
 }

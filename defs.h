@@ -37,6 +37,8 @@
 #define COL_BLUE         15
 #define COL_MAGENTA      16
 #define COL_CYAN         17
+#define COL_ORANGE       21
+#define COL_PINK         22
 
 #define COL_BKG          COL_BLUE
 
