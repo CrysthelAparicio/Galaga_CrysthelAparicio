@@ -74,8 +74,10 @@ void presentacion()
 	mvwprintw(term,22+y_ofs,29+x_ofs,    "Presiona cualquier tecla para empezar");
 	SET_COLOR(COL_DARKCYAN);
 
+	
+
 	while (wgetch(term) == ERR)
-		;
+	;
 
 	wclear(term);
 }

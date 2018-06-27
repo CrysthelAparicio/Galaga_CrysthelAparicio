@@ -195,8 +195,8 @@ void mover_thanos(void *q_ptr)
                 if (n>=0)
                 {
                     todas_naves[n].tipo = AT_DIM;
-                    todas_naves[n].blit = blit_mini_nave;
-                    todas_naves[n].clear = limpiar_mini_nave;
+                    //todas_naves[n].blit = blit_mini_nave;
+                    //todas_naves[n].clear = limpiar_mini_nave;
                     for (i=0;i<MAX_ALT;i++)
                     todas_naves[n].collide[i] = bitmask_dim_nave[i];
                     todas_naves[n].estado = -1;

@@ -12,7 +12,7 @@ extern WINDOW *term;
 
 // Puntaje necesitado para matar a Thanos
 #ifdef NIVEL_DIFICIL
-#define PUNTAJE_NECESITADO 10000
+#define PUNTAJE_NECESITADO 4000
 #else
 #ifdef NIVEL_FACIL
 #define PUNTAJE_NECESITADO  2000
@@ -20,7 +20,7 @@ extern WINDOW *term;
 #endif
 
 #ifndef PUNTAJE_NECESITADO
-#define PUNTAJE_NECESITADO  5000
+#define PUNTAJE_NECESITADO  3000
 #endif
 
 extern int puntaje;
@@ -369,8 +369,8 @@ int creacion_naves()
 						todas_naves[ar_num].collide[n]=bitmask_bola_nave[n];
 					break;
 				case AT_DIM:
-					todas_naves[ar_num].blit=blit_mini_nave;
-					todas_naves[ar_num].clear=limpiar_mini_nave;
+					//todas_naves[ar_num].blit=blit_mini_nave;
+					//todas_naves[ar_num].clear=limpiar_mini_nave;
 					for (n=0;n<MAX_ALT;n++)
 						todas_naves[ar_num].collide[n]=bitmask_dim_nave[n];
 					break;

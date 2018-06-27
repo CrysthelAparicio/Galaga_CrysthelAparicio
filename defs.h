@@ -20,6 +20,7 @@
 #define PC_BLUE 5
 #define PC_MAGENTA 6
 #define PC_CYAN 7
+#define PC_PINK 8
 
 #define SET_COLOR(x) wcolor_set(term,((x)>10)?((x)-10):(x),NULL); ((x)>10)?wattron(term,A_BOLD):wattroff(term,A_BOLD);
 
@@ -38,7 +39,7 @@
 #define COL_MAGENTA      16
 #define COL_CYAN         17
 #define COL_ORANGE       21
-#define COL_PINK         22
+#define COL_PINK         23
 
 #define COL_BKG          COL_BLUE
 
